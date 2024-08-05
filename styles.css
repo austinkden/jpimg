@@ -7,15 +7,14 @@ body {
     background-color: #f0f0f0;
 }
 
-.photo-container {
-    border: 2px solid #ccc;
-    padding: 10px;
-    background-color: #fff;
+.container {
     display: flex;
-    gap: 10px;
+    gap: 25px;
 }
 
 img {
-    max-width: 100%;
+    max-width: 45%;
     height: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

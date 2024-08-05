@@ -1,21 +1,9 @@
-document.addEventListener("DOMContentLoaded", async function() {
-    const baseUrl = 'https://www.jetphotos.com/photo/';
+function getRandomPhotoURL() {
+    const randomNumber = Math.floor(Math.random() * 1000000);
+    return `https://jetphotos.com/${111000000 + randomNumber}`;
+}
 
-    // Function to generate a random 5-digit number
-    function generateRandomId() {
-        let id = '111';
-        for (let i = 0; i < 5; i++) {
-            id += Math.floor(Math.random() * 10).toString();
-        }
-        return id;
-    }
-
-    // Function to fetch the image URL from a JetPhotos page
-    async function fetchPhotoUrl(photoId) {
-        const proxyUrl = 'https://api.allorigins.win/get?url=';
-        const fetchUrl = `${proxyUrl}${encodeURIComponent(baseUrl + photoId)}`;
-        try {
-            const response = await fetch(fetchUrl);
-            const data = await response.json();
-            const parser = new DOMParser();
-      
+window.onload = function() {
+    document.getElementById('photo1').src = getRandomPhotoURL();
+    document.getElementById('photo2').src = getRandomPhotoURL();
+}
